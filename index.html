@@ -46,12 +46,12 @@
                         </div>
                     </div>
                     <div class="contact-list">
-                        <div class="contact-user">
+                        <div class="contact-user" v-for="(element, i) in contacts">
                             <div class="container-img-user">
-                                <img src="img/avatar_1.jpg" alt="user-1">
+                                <img :src="img/avatar{{element.image}}" >
                             </div>
                             <div class="container-user-txt">
-                                <span>Michele</span>
+                                <span>{{element.name}}</span>
                             </div>
                         </div>
                     </div>
