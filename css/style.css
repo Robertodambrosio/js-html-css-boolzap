@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans',
+        sans-serif;
 }
 
 body {
@@ -53,32 +55,145 @@ main {
     background-color: blue;
 }
 
-/* COLONNA SX  */
+/* ============COLONNA SX  */
+
 
 .header-col-sx {
     height: 10%;
     width: 100%;
     background-color: #eaeaea;
     border-right: 2px solid #e3e3e3;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
+
+/* MAIN USER  */
+.main-user {
+    width: 80%;
+    display: flex;
+}
+
+.main-user img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.main-user span {
+    font-size: 14px;
+    align-self: center;
+}
+
+.icon-user-container {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: #b1b1b1;
+}
+
+/* / MAIN USER  */
+/* NOTIFICATION  */
 
 .notification {
     height: 10%;
     width: 100%;
     background-color: #8edafc;
+    padding: 10px;
 }
 
+.notify-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.notify-container i {
+    background-color: white;
+    padding: 10px 8px;
+    border-radius: 50%;
+    color: #8edafc;
+    margin-right: 10px;
+}
+
+.notify-container span {
+    font-size: 14px;
+    color: #23343b;
+}
+
+.notify-container p {
+    font-size: 10px;
+    text-decoration: underline;
+    color: #6ca6bd;
+}
+
+/* / NOTIFICATION  */
+
+/* SEARCH  */
 .search {
-    height: 5%;
+    height: 6%;
     width: 100%;
     background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.container-search {
+    width: 95%;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.container-search i {
+    font-size: 12px;
+    padding: 0 5px;
+    color: #e3e3e3;
+}
+
+.container-search input {
+    border: none;
+    width: 90%;
+    color: #d0d0d0
+}
+
+
+
+/* / SEARCH  */
 
 .contact-list {
     height: 75%;
     width: 100%;
 }
 
+.contact-user {
+    height: 15%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.container-img-user {
+    width: 15%;
+    align-self: center;
+}
+
+.container-img-user img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.container-user-txt {
+    width: 85%;
+    font-size: 14px;
+}
 
 
 /* COLONNA DX  */
