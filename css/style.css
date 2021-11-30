@@ -5,3 +5,98 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    height: 100vh;
+    background: rgb(0, 150, 136);
+    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(215, 219, 214, 1) 15%);
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+/* CONTAINER COLONNE  */
+
+.container-col {
+    margin: 0 auto;
+    width: 80%;
+    height: 90vh;
+    background-color: #fff;
+    align-self: center;
+}
+
+.col-sx,
+.col-dx {
+    height: 100%;
+}
+
+.col-sx {
+    width: 30%;
+    background-color: red;
+}
+
+.col-dx {
+    width: 70%;
+    background-color: blue;
+}
+
+/* COLONNA SX  */
+
+.header-col-sx {
+    height: 10%;
+    width: 100%;
+    background-color: pink;
+}
+
+.notification {
+    height: 10%;
+    width: 100%;
+    background-color: cyan;
+}
+
+.search {
+    height: 5%;
+    width: 100%;
+    background-color: white;
+}
+
+.contact-list {
+    height: 75%;
+    width: 100%;
+    background-color: yellow;
+}
+
+
+
+/* COLONNA DX  */
+
+.header-col-dx {
+    height: 10%;
+    width: 100%;
+    background-color: lightpink;
+}
+
+.body-col {
+    height: 80%;
+    width: 100%;
+    background-color: green;
+}
+
+.footer-col {
+    height: 10%;
+    width: 100%;
+    background-color: grey;
+}
