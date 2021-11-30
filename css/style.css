@@ -52,7 +52,6 @@ main {
 
 .col-dx {
     width: 70%;
-    background-color: blue;
 }
 
 /* ============COLONNA SX  */
@@ -202,16 +201,110 @@ main {
     height: 10%;
     width: 100%;
     background-color: #eaeaea;
+    border-right: 2px solid #e3e3e3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
 }
+
+.main-user-dx {
+    width: 30%;
+    display: flex;
+}
+
+.user-text {
+    align-self: center;
+}
+
+.user-text p{
+    font-size: 10px;
+}
+
+.main-user-dx img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icon-dx-container {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    color: #b1b1b1;
+}
+
+
+
+
+
+
 
 .body-col {
     height: 80%;
     width: 100%;
+    padding: 40px;
     background-image: url(../img/mine.jpg);
 }
+
+.text-area {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    
+}
+
+.text-io {
+    align-self: flex-end;
+    padding:15px;
+    background-color: #d5f9ba;  
+    border-radius: 10px;
+    min-width: 30%;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.text-area-user {
+    width: 100%;
+    display: flex;
+    float: left;
+    justify-content: flex-start;
+}
+
+.text-user {
+    padding: 15px;
+    background-color: white;
+    min-width: 30%;
+    font-size: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* FOOTER COL  */
 
 .footer-col {
     height: 10%;
     width: 100%;
     background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.icon-footer {
+    width: 10%;
+    text-align: center;
+    color: #6b7376;
+}
+
+.input-msg {
+    width: 80%;
+}
+
+.input-msg input{
+    padding: 10px;
+    width: 100%;
+    border: none
 }
