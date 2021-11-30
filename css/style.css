@@ -9,7 +9,7 @@
 body {
     height: 100vh;
     background: rgb(0, 150, 136);
-    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 15%, rgba(215, 219, 214, 1) 15%);
+    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 18%, rgba(215, 219, 214, 1) 18%);
 }
 
 main {
@@ -45,7 +45,7 @@ main {
 
 .col-sx {
     width: 30%;
-    background-color: red;
+    background-color: white;
 }
 
 .col-dx {
@@ -58,25 +58,25 @@ main {
 .header-col-sx {
     height: 10%;
     width: 100%;
-    background-color: pink;
+    background-color: #eaeaea;
+    border-right: 2px solid #e3e3e3;
 }
 
 .notification {
     height: 10%;
     width: 100%;
-    background-color: cyan;
+    background-color: #8edafc;
 }
 
 .search {
     height: 5%;
     width: 100%;
-    background-color: white;
+    background-color: #eaeaea;
 }
 
 .contact-list {
     height: 75%;
     width: 100%;
-    background-color: yellow;
 }
 
 
@@ -86,17 +86,17 @@ main {
 .header-col-dx {
     height: 10%;
     width: 100%;
-    background-color: lightpink;
+    background-color: #eaeaea;
 }
 
 .body-col {
     height: 80%;
     width: 100%;
-    background-color: green;
+    background-image: url(../img/mine.jpg);
 }
 
 .footer-col {
     height: 10%;
     width: 100%;
-    background-color: grey;
+    background-color: #f3eeea;
 }
