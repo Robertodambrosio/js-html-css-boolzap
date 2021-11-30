@@ -48,7 +48,7 @@
                     <div class="contact-list">
                         <div class="contact-user" v-for="(element, i) in contacts">
                             <div class="container-img-user">
-                                <img :src="img/avatar{{element.image}}" >
+                                <img :src=`img/avatar${element.avatar}.jpg` >
                             </div>
                             <div class="container-user-txt">
                                 <span>{{element.name}}</span>
