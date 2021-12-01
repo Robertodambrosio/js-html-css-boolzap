@@ -83,14 +83,14 @@ const app = new Vue({
         ],
 
         currentContact: 0,
-        textSent : '',
-        
+        textSent: '',
+
     },
     methods: {
         activeItem: function (i) {
             this.currentContact = i;
         },
-    
+
         setActiveClass: function (i) {
             if (i == this.currentContact) {
                 return 'active';
@@ -99,13 +99,26 @@ const app = new Vue({
             }
         },
         sendMessage: function (i) {
-            if(this.textSent !== '')
-            this.contacts[i].messages.push({
-                date: '10/01/2020 15:50:00',
-                message: this.textSent,
-                status: 'sent',
-            })
+            if (this.textSent !== '') {
+                this.contacts[i].messages.push({
+                    date: '10/01/2020 15:50:00',
+                    message: this.textSent,
+                    status: 'sent',
+                });
+            };
+            setTimeout(() => {
+                this.answerMessage(i);
+                }, 1000);
             this.textSent = '';
-        }
+        },
+
+        answerMessage: function (i) {
+            this.contacts[i].messages.push({
+                date: '10/01/2020 15:50:01',
+                message: 'Sium',
+                status: 'received',
+            })
+        },
+
     }
 });

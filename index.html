@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <div class="body-col">
-                        <div class="text-area" v-for="(element, i) in contacts[currentContact].messages">
+                        <div class="text-area" v-for="element in contacts[currentContact].messages">
                             <div class="text-sent" :class="element.status">
                                 <div class="message-content">{{element.message}}</div>
                                 <span class="message-date">{{element.date}}</span>

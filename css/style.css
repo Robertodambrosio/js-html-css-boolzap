@@ -259,6 +259,8 @@ main {
     width: 100%;
     padding: 40px;
     background-image: url(../img/mine.jpg);
+    overflow-y: scroll;
+    flex-grow: 1
 }
 
 .text-area {
