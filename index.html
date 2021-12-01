@@ -22,7 +22,7 @@
                     <div class="header-col-sx">
                         <div class="main-user">
                             <img src="img/avatar_io.jpg" alt="main-user">
-                            <span>Nome utente</span>
+                            <span>Chiappì</span>
                         </div>
                         <div class="icon-user-container">
                             <i class="fas fa-circle-notch"></i>
@@ -42,11 +42,11 @@
                     <div class="search">
                         <div class="container-search">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="search">
                         </div>
                     </div>
                     <div class="contact-list">
-                        <div class="contact-user" v-for="(element, i) in contacts" :class="setActiveClass(i)" @click="activeItem(i)">
+                        <div class="contact-user" v-for="(element, i) in contacts" :class="setActiveClass(i)" @click="activeItem(i)" v-if="searchFilter(i)">
                             <div class="container-img-user">
                                 <img :src=`img/avatar${element.avatar}.jpg` :alt="element.name">
                             </div>
