@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans',
+    font-family: 'Lato',
         sans-serif;
 }
 
@@ -48,6 +48,8 @@ main {
 .col-sx {
     width: 30%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .col-dx {
@@ -134,7 +136,7 @@ main {
 .search {
     height: 6%;
     width: 100%;
-    background-color: #eaeaea;
+    background-color: #fafafa;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,6 +149,7 @@ main {
     border-radius: 20px;
     display: flex;
     align-items: center;
+    box-shadow: 1px 1px 2px rgb(240, 240, 240);
 }
 
 .container-search i {
@@ -166,8 +169,9 @@ main {
 /* / SEARCH  */
 
 .contact-list {
-    height: 75%;
     width: 100%;
+    overflow-y: scroll;
+    flex-grow: 1;
 }
 
 .contact-user {
@@ -177,6 +181,7 @@ main {
     display: flex;
     align-items: flex-start;
     border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
 }
 
 .container-img-user {
@@ -190,10 +195,18 @@ main {
 }
 
 .container-user-txt {
+    margin-top: 5px;
     width: 85%;
     font-size: 14px;
 }
 
+.active {
+    background-color: rgb(209, 209, 209);
+}
+
+.none {
+    display: none;
+}
 
 /* COLONNA DX  */
 
@@ -249,37 +262,34 @@ main {
 }
 
 .text-area {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 0;
-    
+    width: 100%;  
+    display:flex;
+    position:relative;   
 }
 
-.text-io {
-    align-self: flex-end;
-    padding:15px;
-    background-color: #d5f9ba;  
+.text-sent{
+    padding:15px;  
     border-radius: 10px;
-    min-width: 30%;
-    font-size: 10px;
-    font-weight: 600;
+    width: 40%;
+    font-size: 12px;
+    margin-top: 10px
 }
 
-.text-area-user {
-    width: 100%;
-    display: flex;
-    float: left;
-    justify-content: flex-start;
+.sent {
+    margin-left: auto;
+    background-color: #d5f9ba;
 }
 
-.text-user {
-    padding: 15px;
-    background-color: white;
-    min-width: 30%;
-    font-size: 10px;
-    border-radius: 10px;
-    font-weight: 600;
+.received {
+    background-color: #fff;
+}
+
+
+.message-date {
+    font-size: 9px;
+    color: #888;
+    margin-top: 10px;
+    float: right;
 }
 
 /* FOOTER COL  */
@@ -301,10 +311,12 @@ main {
 
 .input-msg {
     width: 80%;
+    
 }
 
 .input-msg input{
     padding: 10px;
     width: 100%;
-    border: none
+    border: none;
+    border-radius: 20px;
 }

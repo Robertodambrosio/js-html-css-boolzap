@@ -46,9 +46,9 @@
                         </div>
                     </div>
                     <div class="contact-list">
-                        <div class="contact-user" v-for="(element, i) in contacts">
+                        <div class="contact-user" v-for="(element, i) in contacts" :class="setActiveClass(i)" @click="activeItem(i)">
                             <div class="container-img-user">
-                                <img :src=`img/avatar${element.avatar}.jpg` >
+                                <img :src=`img/avatar${element.avatar}.jpg` alt="element.name">
                             </div>
                             <div class="container-user-txt">
                                 <span>{{element.name}}</span>
@@ -59,9 +59,9 @@
                 <div class="col-dx left">
                     <div class="header-col-dx">
                          <div class="main-user-dx">
-                            <img src="img/avatar_1.jpg" alt="main-user">
+                            <img :src=`img/avatar${contacts[currentContact].avatar}.jpg` alt={{contacts[currentContact].name}}>
                             <div class="user-text">
-                            <span>Michele</span>
+                            <span>{{contacts[currentContact].name}}</span>
                             <p>Ultimo accesso alle:</p>
                             </div>
                         </div>
@@ -72,11 +72,11 @@
                         </div>
                     </div>
                     <div class="body-col">
-                        <div class="text-area">
-                            <span class="text-io">Ciao Mccchè!</span>
-                        </div>
-                        <div class="text-area-user">
-                            <span class="text-user">Ciao Chiappì!</span>
+                        <div class="text-area" v-for="(element, i) in contacts">
+                            <div class="text-sent" :class={{element[currentContact].messages[i].status}}>
+                                <div class="message-content">{{element[currentContact].messages[i].message}}</div>
+                                <span class="message-date">{{element[currentContact].messages[i].date}}</span>
+                            </div>
                         </div>
                     </div>
                     <div class="footer-col">
