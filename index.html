@@ -59,7 +59,7 @@
                 <div class="col-dx left">
                     <div class="header-col-dx">
                          <div class="main-user-dx">
-                            <img :src=`img/avatar${contacts[currentContact].avatar}.jpg` alt={{contacts[currentContact].name}}>
+                            <img :src=`img/avatar${contacts[currentContact].avatar}.jpg` :alt="contacts[currentContact].name">
                             <div class="user-text">
                             <span>{{contacts[currentContact].name}}</span>
                             <p>Ultimo accesso alle:</p>
@@ -72,10 +72,10 @@
                         </div>
                     </div>
                     <div class="body-col">
-                        <div class="text-area" v-for="(element, i) in contacts">
-                            <div class="text-sent" :class={{element[currentContact].messages[i].status}}>
-                                <div class="message-content">{{element[currentContact].messages[i].message}}</div>
-                                <span class="message-date">{{element[currentContact].messages[i].date}}</span>
+                        <div class="text-area" v-for="(element, i) in contacts[currentContact].messages">
+                            <div class="text-sent" :class="element.status">
+                                <div class="message-content">{{element.message}}</div>
+                                <span class="message-date">{{element.date}}</span>
                             </div>
                         </div>
                     </div>
