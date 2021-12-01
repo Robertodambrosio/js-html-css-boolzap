@@ -48,7 +48,7 @@
                     <div class="contact-list">
                         <div class="contact-user" v-for="(element, i) in contacts" :class="setActiveClass(i)" @click="activeItem(i)">
                             <div class="container-img-user">
-                                <img :src=`img/avatar${element.avatar}.jpg` alt="element.name">
+                                <img :src=`img/avatar${element.avatar}.jpg` :alt="element.name">
                             </div>
                             <div class="container-user-txt">
                                 <span>{{element.name}}</span>
@@ -84,7 +84,7 @@
                             <i class="far fa-smile"></i>
                         </div>
                         <div class="input-msg">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model='textSent' @keyup.enter="sendMessage(currentContact)">
                         </div>
                         <div class="icon-footer">
                             <i class="fas fa-microphone"></i>
