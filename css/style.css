@@ -200,6 +200,12 @@ main {
     font-size: 14px;
 }
 
+.container-user-txt p{
+    font-size: 12px;
+    margin-top: 2px;
+    color: #888;
+}
+
 .active {
     background-color: rgb(209, 209, 209);
 }

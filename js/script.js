@@ -2,22 +2,22 @@ const app = new Vue({
     el: '#root',
     data: {
         contacts: [{
-                name: 'Michele',
+                name: 'Cristiano',
                 avatar: '_1',
                 visible: true,
                 messages: [{
                         date: '10/01/2020 15:30:55',
-                        message: 'Hai portato a spasso il cane?',
+                        message: 'Cristiano ma perchè sei andato via dalla Juve?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Ricordati di dargli da mangiare',
+                        message: 'Ti prego rispondimi',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
+                        message: 'EU ESTOY AQUI',
                         status: 'received'
                     }
                 ],
@@ -148,7 +148,7 @@ const app = new Vue({
 
         currentContact: 0,
         textSent: '',
-        search: '',
+        searchInput: '',
 
     },
     methods: {
@@ -185,11 +185,15 @@ const app = new Vue({
             })
         },
             searchFilter : function(i){
-            if (this.contacts[i].name.toLowerCase().includes(this.search.toLowerCase())) {
+            if (this.contacts[i].name.toLowerCase().includes(this.searchInput.toLowerCase())) {
                 return true;
             } else {
                 return false;
             }
+        },
+        lastMessage: function(i) {    
+            const last = this.contacts[i].messages.length - 1;
+            return this.contacts[i].messages[last].message;
         }
     }
 });
