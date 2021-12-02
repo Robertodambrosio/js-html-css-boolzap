@@ -149,7 +149,6 @@ const app = new Vue({
         currentContact: 0,
         textSent: '',
         searchInput: '',
-        showMenu: false,
     },
     methods: {
         activeItem: function (i) {
@@ -195,5 +194,14 @@ const app = new Vue({
             const last = this.contacts[i].messages.length - 1;
             return this.contacts[i].messages[last].message;
         },
+
+        showMsgMenu: function(current){
+            for(i = 0; i < this.contacts[current].messages.length; i++) {
+                this.contacts[current].messages[i].showMenu = false;
+            }
+        },
+        msgTrue: function(){
+            
+        }
     }
 });
