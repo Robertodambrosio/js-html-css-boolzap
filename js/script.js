@@ -86,7 +86,7 @@ const app = new Vue({
                     }
                 ],
             },
-                        {
+            {
                 name: 'Alessio',
                 avatar: '_5',
                 visible: true,
@@ -103,7 +103,7 @@ const app = new Vue({
                     }
                 ],
             },
-                        {
+            {
                 name: 'Cristina',
                 avatar: '_6',
                 visible: true,
@@ -120,7 +120,7 @@ const app = new Vue({
                     }
                 ],
             },
-                        {
+            {
                 name: 'Giovanni',
                 avatar: '_7',
                 visible: true,
@@ -137,7 +137,7 @@ const app = new Vue({
                     }
                 ],
             },
-                        {
+            {
                 name: 'Ciro',
                 avatar: '_8',
                 visible: true,
@@ -183,7 +183,7 @@ const app = new Vue({
             };
             setTimeout(() => {
                 this.answerMessage(i);
-                }, 1000);
+            }, 1000);
             this.textSent = '';
         },
 
@@ -194,25 +194,27 @@ const app = new Vue({
                 status: 'received',
             })
         },
-            searchFilter : function(i){
+        searchFilter: function (i) {
             if (this.contacts[i].name.toLowerCase().includes(this.searchInput.toLowerCase())) {
                 return true;
             } else {
                 return false;
             }
         },
-        lastMessage: function(i) {    
+        lastMessage: function (i) {
             const last = this.contacts[i].messages.length - 1;
             return this.contacts[i].messages[last].message;
         },
 
-        msgMenu: function(element){
-            console.log(element.showMsg);
+        msgMenu: function (element) {
             if (element.showMsg == false) {
                 element.showMsg = true
-        } else {
-            element.showMsg = false
+            } else {
+                element.showMsg = false
+            }
+        },
+        removeChat: function (current, i) {
+            this.contacts[current].messages.splice(i, 1);
         }
-    },
     }
 });
