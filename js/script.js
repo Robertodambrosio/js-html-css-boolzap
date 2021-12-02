@@ -8,12 +8,14 @@ const app = new Vue({
                 messages: [{
                         date: '10/01/2020 15:30:55',
                         message: 'Cristiano ma perchè sei andato via dalla Juve?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 15:50:00',
                         message: 'Ti prego rispondimi',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 16:15:22',
@@ -29,7 +31,8 @@ const app = new Vue({
                 messages: [{
                         date: '20/03/2020 16:30:00',
                         message: 'Ciao come stai?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '20/03/2020 16:30:55',
@@ -39,7 +42,8 @@ const app = new Vue({
                     {
                         date: '20/03/2020 16:35:00',
                         message: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     }
                 ],
             },
@@ -55,7 +59,8 @@ const app = new Vue({
                     {
                         date: '28/03/2020 10:20:10',
                         message: 'Sicuro di non aver sbagliato chat?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '28/03/2020 16:15:22',
@@ -71,7 +76,8 @@ const app = new Vue({
                 messages: [{
                         date: '10/01/2020 15:30:55',
                         message: 'Lo sai che ha aperto una nuova pizzeria?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -87,7 +93,8 @@ const app = new Vue({
                 messages: [{
                         date: '10/01/2020 15:30:55',
                         message: 'Hai visto che gol ieri Rabiot?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -103,7 +110,8 @@ const app = new Vue({
                 messages: [{
                         date: '10/01/2020 15:30:55',
                         message: 'Hai visto ieri la Juventus ha vinto contro il Napoli?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -119,7 +127,8 @@ const app = new Vue({
                 messages: [{
                         date: '10/01/2020 15:30:55',
                         message: 'Ue uagliù arò sta o pallun?',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -135,7 +144,8 @@ const app = new Vue({
                 messages: [{
                         date: '10/01/2020 15:30:55',
                         message: 'Ciao',
-                        status: 'sent'
+                        status: 'sent',
+                        showMsg: false,
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -168,6 +178,7 @@ const app = new Vue({
                     date: '10/01/2020 15:50:00',
                     message: this.textSent,
                     status: 'sent',
+                    showMsg: false,
                 });
             };
             setTimeout(() => {
@@ -195,13 +206,13 @@ const app = new Vue({
             return this.contacts[i].messages[last].message;
         },
 
-        showMsgMenu: function(current){
-            for(i = 0; i < this.contacts[current].messages.length; i++) {
-                this.contacts[current].messages[i].showMenu = false;
-            }
-        },
-        msgTrue: function(){
-            
+        msgMenu: function(element){
+            console.log(element.showMsg);
+            if (element.showMsg == false) {
+                element.showMsg = true
+        } else {
+            element.showMsg = false
         }
+    },
     }
 });
