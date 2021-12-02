@@ -75,7 +75,12 @@
                     <div class="body-col">
                         <div class="text-area" v-for="element in contacts[currentContact].messages">
                             <div class="text-sent" :class="element.status">
-                                <div class="message-content">{{element.message}}</div>
+                                <div class="message-content">{{element.message}}<i class="fas fa-chevron-down" @click="showMenu = !showMenu"></i>
+                                <ul class="menu-show" :class="{ block: showMenu }">
+                                    <li>Info Message</li>
+                                    <li>Delete Message</li>
+                                </ul>
+                                </div>
                                 <span class="message-date">{{element.date}}</span>
                             </div>
                         </div>

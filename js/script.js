@@ -86,12 +86,12 @@ const app = new Vue({
                 visible: true,
                 messages: [{
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Hai visto che gol ieri Rabiot?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'Ha segnato con le mani?',
                         status: 'received'
                     }
                 ],
@@ -102,12 +102,12 @@ const app = new Vue({
                 visible: true,
                 messages: [{
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Hai visto ieri la Juventus ha vinto contro il Napoli?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'Su FIFA o su Pes?',
                         status: 'received'
                     }
                 ],
@@ -118,12 +118,12 @@ const app = new Vue({
                 visible: true,
                 messages: [{
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Ue uagliù arò sta o pallun?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'Sta ngopp ò Rion',
                         status: 'received'
                     }
                 ],
@@ -134,12 +134,12 @@ const app = new Vue({
                 visible: true,
                 messages: [{
                         date: '10/01/2020 15:30:55',
-                        message: 'Lo sai che ha aperto una nuova pizzeria?',
+                        message: 'Ciao',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'Ma chi sei lasciami sta',
                         status: 'received'
                     }
                 ],
@@ -149,7 +149,7 @@ const app = new Vue({
         currentContact: 0,
         textSent: '',
         searchInput: '',
-
+        showMenu: false,
     },
     methods: {
         activeItem: function (i) {
@@ -194,6 +194,6 @@ const app = new Vue({
         lastMessage: function(i) {    
             const last = this.contacts[i].messages.length - 1;
             return this.contacts[i].messages[last].message;
-        }
+        },
     }
 });
