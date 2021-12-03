@@ -35,7 +35,7 @@ main {
 .container-col {
     margin: 0 auto;
     width: 80%;
-    height: 90vh;
+    height: 90%;
     background-color: #fff;
     align-self: center;
 }
@@ -60,7 +60,7 @@ main {
 
 
 .header-col-sx {
-    height: 12%;
+    height: 10%;
     width: 100%;
     background-color: #eaeaea;
     border-right: 2px solid #e3e3e3;
@@ -98,7 +98,7 @@ main {
 /* NOTIFICATION  */
 
 .notification {
-    height: 15%;
+    height: 13%;
     width: 100%;
     background-color: #8edafc;
     padding: 10px;
@@ -161,7 +161,7 @@ main {
 .container-search input {
     border: none;
     width: 90%;
-    color: #d0d0d0
+    color: #838383
 }
 
 
@@ -198,9 +198,9 @@ main {
 }
 
 .container-user-txt {
-    margin-top: 5px;
     width: 85%;
     font-size: 14px;
+    align-self: center;
 }
 
 
@@ -338,6 +338,7 @@ main {
 
 .menu-show li:hover{
     background-color: rgb(235, 235, 235);
+    cursor: pointer;
 }
 
 .message-date {
