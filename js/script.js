@@ -159,6 +159,7 @@ const app = new Vue({
         currentContact: 0,
         textSent: '',
         searchInput: '',
+        activeChat: false,
     },
     methods: {
         activeItem: function (i) {
@@ -205,6 +206,10 @@ const app = new Vue({
             const last = this.contacts[i].messages.length - 1;
             return this.contacts[i].messages[last].message;
         },
+        lastDate: function (i) {
+            const last = this.contacts[i].messages.length - 1;
+            return this.contacts[i].messages[last].date;
+        },
 
         msgMenu: function (element) {
             if (element.showMsg == false) {
@@ -215,6 +220,10 @@ const app = new Vue({
         },
         removeChat: function (current, i) {
             this.contacts[current].messages.splice(i, 1);
-        }
+        },
+        removeNotify: function () {
+            let element = document.getElementById('notify')
+            element.remove();
+        },
     }
 });

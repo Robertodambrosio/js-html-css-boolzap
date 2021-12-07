@@ -30,8 +30,11 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <div class="notification">
+                    <div class="notification" id="notify">
                         <div class="notify-container">
+                            <div class="remove-cross" @click="removeNotify()">
+                                <i class="fas fa-times"></i>
+                            </div>
                             <i class="fas fa-bell-slash"></i>
                             <div class="notify-text">
                                 <span>Ricevi notifiche di nuovi messaggi</span>
@@ -51,13 +54,15 @@
                                 <img :src=`img/avatar${element.avatar}.jpg` :alt="element.name">
                             </div>
                             <div class="container-user-txt">
-                                <span>{{element.name}}</span>
+                                <span>{{element.name}}<span class="datechat">{{lastDate(i)}}</span></span>
                                  <p>{{lastMessage(i)}}</p> 
+                                 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-dx left">
+                
+                <div class="col-dx left">         
                     <div class="header-col-dx">
                          <div class="main-user-dx">
                             <img :src=`img/avatar${contacts[currentContact].avatar}.jpg` :alt="contacts[currentContact].name">
@@ -96,6 +101,7 @@
                             <i class="fas fa-microphone"></i>
                         </div>
                     </div>
+                
                 </div>
             </div>
         </main>
