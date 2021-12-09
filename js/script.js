@@ -176,7 +176,7 @@ const app = new Vue({
         sendMessage: function (i) {
             if (this.textSent !== '') {
                 this.contacts[i].messages.push({
-                    date: '10/01/2020 15:50:00',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     message: this.textSent,
                     status: 'sent',
                     showMsg: false,
@@ -190,7 +190,7 @@ const app = new Vue({
 
         answerMessage: function (i) {
             this.contacts[i].messages.push({
-                date: '10/01/2020 15:50:01',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 message: 'Sium',
                 status: 'received',
             })
